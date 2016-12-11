@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Schedule</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container">
+		<!-- 		jumbotron row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="jumbotron">
+					<h1 class="text-center">Sugar Land Train Station</h1>
+					<h3 class="text-center"> Train Scheduler </h3>
+				</div>
+			</div>
+		</div>
+	
+		<!-- Schedule board -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+				    	<h3 class="panel-title">Current Train Schedule</h3>
+				  	</div>
+				  
+				  	<div class="panel-body" id="trainScheduleShow">
+				    	Panel content
+				  	</div>
+				</div>
+			</div>	
+		</div>	
+		
+		<!-- input -->
+		<div class="row"> <!-- row for add train input -->
+			<div class="col-sm-12"> <!-- col for add train input -->
+				<div class="panel panel-primary"> <!-- panel for input data -->
+					<div class="panel-heading"> <!-- add train heading div -->
+				    	<h3 class="panel-title">Add Train(s)</h3>
+				  	</div> <!-- closing add train heading div -->
+				  	
+					<div class="panel-body" id="trainAddInput"> <!-- add train panel body -->
+						<div class="row"> <!-- sub row for Train name -->
+							<div class="col-sm-12">
+								<label for="basic-url">Train Name</label>
+								<div class="input-group">
+									 <input type="text" class="form-control" id="trainNameInput">
+								</div>
+							</div>	
+						</div> <!-- sub row for Train name -->
+						
+						<br>
+						
+						<div class="row"> <!-- sub row for Train destination -->
+							<div class="col-sm-12">
+								<label for="basic-url">Destination</label>
+								<div class="input-group">
+									 <input type="text" class="form-control" id="trainDesInput">
+								</div>
+							</div>	
+						</div> <!-- sub row for Train destination -->
+
+						<br>
+						
+						<div class="row"> <!-- sub row for Frist Train Time -->
+							<div class="col-sm-12">
+								<label for="basic-url">First Train Arrival Time (hh:mm, military time)</label>
+								<div class="input-group">
+									 <input type="text" class="form-control" id="firstTrainInput">
+								</div>
+							</div>	
+						</div> <!-- closing sub row for Frist Train Time  -->
+						
+						<br>
+
+						<div class="row"> <!-- sub row for frequency  -->
+							<div class="col-sm-12">
+								<label for="basic-url">Frequency (minutes)</label>
+								<div class="input-group">
+									 <input type="text" class="form-control" id="frequencyInput">
+								</div>
+							</div>	
+						</div> <!-- closing sub row for frequency  -->
+
+						<br>
+
+						<div class="row"> <!-- sub row for frequency  -->
+							<div class="col-sm-12">
+								<button type="button" class="btn btn-primary" id="trainSubmit">Submit</button>
+							</div>	
+						</div> <!-- closing sub row for frequency  -->
+
+				  	</div> <!-- closing add train panel body -->
+				</div> <!-- closing panel for input data -->
+			</div>	<!-- closing col for add train input -->
+		</div>	<!-- closing row for add train input -->
+
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="assets/Javascript/app.js"></script>
+
+
+</body>
+</html>
