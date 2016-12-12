@@ -18,19 +18,31 @@
 		</div>
 	
 		<!-- Schedule board -->
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
+		<div class="row"> <!-- row for panel for schedule -->
+			<div class="col-sm-12"> <!-- column for panel for schedule -->
+				<div class="panel panel-primary"> <!-- div for panel -->
+					<div class="panel-heading"> <!-- div panel heading -->
 				    	<h3 class="panel-title">Current Train Schedule</h3>
-				  	</div>
+				  	</div><!-- closing div panel heading -->
 				  
-				  	<div class="panel-body" id="trainScheduleShow">
-				    	Panel content
-				  	</div>
-				</div>
-			</div>	
-		</div>	
+				  	<div class="panel-body"> <!-- panel body to show content -->
+				    	<table id="trainScheduleShow"> <!-- starting table -->
+				    		<thead>
+				    			<tr class="row">
+				    				<th class="col-sm-3">Train Name</th>
+				    				<th class="col-sm-3">Destination</th>
+				    				<th class="col-sm-3">Frequency (min)</th>
+				    				<th class="col-sm-3">Next Arrival</th>
+				    				<th class="col-sm-3">Minutes Away</th>
+				    			</tr>
+				    		</thead>
+				    		
+				    	</table> <!-- closing table -->
+				  	</div> <!-- closing panel body to show content -->
+
+				</div> <!-- closing div for panel -->
+			</div>	<!-- column for panel for schedule -->
+		</div>	<!-- closing row for panel for schedule -->
 		
 		<!-- input -->
 		<div class="row"> <!-- row for add train input -->
@@ -43,10 +55,8 @@
 					<div class="panel-body" id="trainAddInput"> <!-- add train panel body -->
 						<div class="row"> <!-- sub row for Train name -->
 							<div class="col-sm-12">
-								<label for="basic-url">Train Name</label>
-								<div class="input-group">
-									 <input type="text" class="form-control" id="trainNameInput">
-								</div>
+								<label for="trainName">Train Name</label>
+								<input type="text" class="form-control" id="trainNameInput">
 							</div>	
 						</div> <!-- sub row for Train name -->
 						
@@ -54,10 +64,8 @@
 						
 						<div class="row"> <!-- sub row for Train destination -->
 							<div class="col-sm-12">
-								<label for="basic-url">Destination</label>
-								<div class="input-group">
-									 <input type="text" class="form-control" id="trainDesInput">
-								</div>
+								<label for="destination">Destination</label>
+								<input type="text" class="form-control" id="trainDesInput">
 							</div>	
 						</div> <!-- sub row for Train destination -->
 
@@ -65,10 +73,8 @@
 						
 						<div class="row"> <!-- sub row for Frist Train Time -->
 							<div class="col-sm-12">
-								<label for="basic-url">First Train Arrival Time (hh:mm, military time)</label>
-								<div class="input-group">
-									 <input type="text" class="form-control" id="firstTrainInput">
-								</div>
+								<label for="arrival">First Train Arrival Time (hh:mm, military time)</label>
+								<input type="text" class="form-control" id="firstTrainInput">
 							</div>	
 						</div> <!-- closing sub row for Frist Train Time  -->
 						
@@ -77,9 +83,7 @@
 						<div class="row"> <!-- sub row for frequency  -->
 							<div class="col-sm-12">
 								<label for="basic-url">Frequency (minutes)</label>
-								<div class="input-group">
-									 <input type="text" class="form-control" id="frequencyInput">
-								</div>
+								<input type="text" class="form-control" id="frequencyInput">
 							</div>	
 						</div> <!-- closing sub row for frequency  -->
 
