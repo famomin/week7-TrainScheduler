@@ -15,7 +15,7 @@ var database = firebase.database();
 $('#trainSubmit').on("click", function(){
 	var tName = $('#trainNameInput').val().trim();
 	var tDestination = $('#trainDesInput').val().trim();
-	var tTimeMil = moment($('#firstTrainInput').val().trim(),"hh:mm a");
+	var tTimeMil = $('#firstTrainInput').val().trim();
 	var tFrequency = $('#frequencyInput').val().trim();
 
 	// Creates local "temporary" object for holding train data
