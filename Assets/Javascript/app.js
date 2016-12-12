@@ -46,11 +46,14 @@ database.ref().on("child_added", function(childSnapshot, preveChildKey){
     var firstTrainTime = childSnapshot.val().firstTrain;
     var trainFrequency = childSnapshot.val().frequency;
 
+    // Time dated back 1 year
+    var firstTimeConverted = moment(firstTrainTime, "hh:mm").subtract(1, "years");
+
     //Time as of now
     var timeNow = moment();
 
     //time difference
-    var timeDifference = moment().diff(moment(firstTrainTime), "minutes");
+    var timeDifference = moment().diff(moment(firstTimeConverted), "minutes");
 
 	//Minutes till next train    
 	var minutesTillNextTrain =(trainFrequency - (timeDifference % trainFrequency));
