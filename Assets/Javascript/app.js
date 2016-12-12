@@ -61,7 +61,7 @@ database.ref().on("child_added", function(childSnapshot, preveChildKey){
 	//Time of next train 
 	var timeOfNextTrain =  moment(timeOfNextTrain).add(minutesTillNextTrain,"minutes").format("hh:mm a");
 
-
+	//showing data on browser table
     $("#trainScheduleShow > tbody").append("<tr><td class=col-sm-3>" + trainName + "</td><td class=col-sm-3>" + trainDestination + "</td><td class=col-sm-3>" +
   		trainFrequency + "</td><td class=col-sm-3>" + timeOfNextTrain + "</td><td class=col-sm-3>" + minutesTillNextTrain + "</td></tr>");
 });
